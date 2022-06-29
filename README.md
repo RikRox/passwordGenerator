@@ -42,7 +42,7 @@ When the button is clicked you will be prompted if you want to customize the pas
 
 ## Assets
 
-The URL is: 
+The URL is: https://rikrox.github.io/passwordGenerator/
 
 A screenshot of the site is in the images folder: [assets](./assets/images/siteScreenshot.PNG)
 
