@@ -25,6 +25,14 @@ function customPassword(){
 
   var customLength = window.prompt("Enter a numerical value for the desired length of the password");
 
+  if (customLength < 8 || customLength > 128) {
+
+    customLength = window.prompt("Enter a length between 8 and 128.");
+
+  }
+
+
+
   var numAllowed = confirm("Do you want to allow numerical values?");
 
   var upperAllowed = confirm("Do you want to allow UPPER case characters?");
@@ -34,6 +42,11 @@ function customPassword(){
   var specialAllowed = confirm("Do you want to allow special characters?");
 
   var customizedPassword ="";
+
+
+
+
+
 
   if (!numAllowed) {
    nums = '';
@@ -58,6 +71,10 @@ function customPassword(){
   } else {
     special = '!@#$%^&*()'; 
   } 
+
+
+
+
 
 
   var chosenChars = nums + upper + lower + special;
@@ -113,3 +130,115 @@ return customizedPassword;
 
 
 
+
+
+
+
+
+
+
+
+
+
+function randomNum (){
+  var num = Math.floor(Math.random() * 127);
+
+  if (num < 32 ) {
+    num += 32;
+  } else {
+    num = num;
+  }
+return num;
+
+}
+
+console.log(randomNum());
+
+
+//convert to character
+
+var character = ''; // String.fromCharCode(randomNum());
+
+console.log(character);
+
+//generate random length of password
+
+function randomLength(){
+  var length = Math.floor(Math.random() * 128);
+
+  if (length < 8){
+    length += 8;
+  }else {
+    length = length;
+  }
+  return length;
+}
+console.log(randomLength());
+
+
+
+var pass = "";
+
+
+function generatePass(){
+for (var i = 0; i < randomLength(); i++) {
+
+character = String.fromCharCode(randomNum());
+ pass += character;
+
+
+}
+
+//window.alert(pass);
+
+
+
+password = pass;
+  
+
+
+  writePassword();
+
+
+}
+
+//generatePass();
+
+
+
+
+// Get references to the #generate element
+var generateBtn = document.querySelector("#generate");
+
+// Write password to the #password input
+function writePassword() {
+
+   // var password = ''; //= generatePassword();
+   var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+
+
+console.log(password);
+}
+
+// Add event listener to generate button
+// generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", start);
+
+
+
+
+// if (customPass == "no" || customPass == "NO" || customPass == "No") {
+//   generatePass();
+
+// } else if (customPass == "yes" || customPass == "YES" || customPass == "Yes") {
+
+
+
+
+
+
+// } else if (customPass == "no" || customPass == "NO") {
+//   window.alert("That was not a valid response!")
+// }
