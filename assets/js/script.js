@@ -5,8 +5,11 @@
 //generate a random number between 0-127
 
 
+var password = '';
 
-function start(){
+
+
+var start = function (){
   var customPass = confirm("Do you want to customize your password ?");
 if (!customPass) {
   generatePass();
@@ -72,7 +75,16 @@ function customPassword(){
   }
 
   console.log(customizedPassword);
-  
+
+  password = customizedPassword;
+  console.log(password);
+
+
+  writePassword();
+
+  //return password;
+
+
 
 
   // switch (true) {
@@ -101,103 +113,3 @@ return customizedPassword;
 
 
 
-
-
-
-
-
-
-
-
-
-
-function randomNum (){
-  var num = Math.floor(Math.random() * 127);
-
-  if (num < 32 ) {
-    num += 32;
-  } else {
-    num = num;
-  }
-return num;
-
-}
-
-console.log(randomNum());
-
-
-//convert to character
-
-var character = ''; // String.fromCharCode(randomNum());
-
-console.log(character);
-
-//generate random length of password
-
-function randomLength(){
-  var length = Math.floor(Math.random() * 128);
-
-  if (length < 8){
-    length += 8;
-  }else {
-    length = length;
-  }
-  return length;
-}
-console.log(randomLength());
-
-
-
-var pass = "";
-
-
-function generatePass(){
-for (var i = 0; i < randomLength(); i++) {
-
-character = String.fromCharCode(randomNum());
- pass += character;
-
-
-}
-
-window.alert(pass);
-
-}
-
-//generatePass();
-
-
-
-
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-}
-
-// Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
-//generateBtn.addEventListener("click", start());
-
-
-
-
-// if (customPass == "no" || customPass == "NO" || customPass == "No") {
-//   generatePass();
-
-// } else if (customPass == "yes" || customPass == "YES" || customPass == "Yes") {
-
-
-
-
-
-
-// } else if (customPass == "no" || customPass == "NO") {
-//   window.alert("That was not a valid response!")
-// }
