@@ -34,7 +34,7 @@ THEN the password is either displayed in an alert or written to the page
 
 ## About the site
 
-![alt text](./assets/site.PNG)
+![PasswordGenerator](./assets/site.PNG)
 ![PasswordGenerator](/images/github-logo.png)
 
 When the button is clicked you will be prompted if you want to customize the password. If you click cancel it will generate a random password with a random length. If you click "ok" to customize the password you will be prompted to choose the length and what characters are allowed. 
@@ -43,7 +43,5 @@ When the button is clicked you will be prompted if you want to customize the pas
 ## Assets
 
 The URL is: https://rikrox.github.io/passwordGenerator/
-
-A screenshot of the site is in the images folder: [assets](./assets/images/siteScreenshot.PNG)
 
 Repository located at: https://github.com/RikRox/passwordGenerator
