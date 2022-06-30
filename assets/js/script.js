@@ -72,6 +72,12 @@ function customPassword(){
     special = '!@#$%^&*()'; 
   } 
 
+  if (!specialAllowed && !lowerAllowed && !upperAllowed && !numAllowed) {
+
+    alert("Try again and allow at least one criteria for your password.")
+
+  }
+
 
 
 
